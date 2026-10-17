@@ -1106,15 +1106,18 @@ function escapeHTML(str) {
   );
 }
 
-// Service worker
+// Register Service Worker dynamically based on current path
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js', { scope: './' })
-      .then(reg => console.log('SW active:', reg))
-      .catch(err => console.warn('SW failed:', err));
+    // Computes the exact base folder (e.g., /self-reflection-app/)
+    const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+    const swPath = `${basePath}sw.js`;
+
+    navigator.serviceWorker.register(swPath, { scope: basePath })
+      .then(reg => console.log('SW registered successfully:', reg.scope))
+      .catch(err => console.error('SW registration failed:', err));
   });
 }
-
 // Initialize
 loadSettings();
 loadData();

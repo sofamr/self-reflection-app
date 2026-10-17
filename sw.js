@@ -1,4 +1,4 @@
-const CACHE_NAME = 'reflect-v1';
+const CACHE_NAME = 'reflect-cache-v1';
 
 self.addEventListener('install', (e) => {
   self.skipWaiting();
@@ -9,8 +9,8 @@ self.addEventListener('activate', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
-  // Required by Chrome for installability verification
+  // Required by Chrome for install verification
   e.respondWith(
-    caches.match(e.request).then((res) => res || fetch(e.request))
+    fetch(e.request).catch(() => caches.match(e.request))
   );
 });

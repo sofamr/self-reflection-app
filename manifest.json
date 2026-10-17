@@ -2,23 +2,29 @@
   "name": "Reflect - Self Reflection",
   "short_name": "Reflect",
   "id": "/self-reflection-app/",
-  "start_url": "./index.html",
-  "scope": "./",
+  "start_url": "/self-reflection-app/index.html",
+  "scope": "/self-reflection-app/",
   "display": "standalone",
   "background_color": "#0b1120",
   "theme_color": "#00bf57",
   "icons": [
     {
-      "src": "favicon_io/android-chrome-192x192.png",
+      "src": "/self-reflection-app/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "favicon_io/android-chrome-512x512.png",
+      "src": "/self-reflection-app/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "/self-reflection-app/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
