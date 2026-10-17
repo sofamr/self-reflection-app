@@ -2,6 +2,7 @@
 
 Reflect is a mobile-first Progressive Web Application (PWA) designed for self-dialogue, perspective-taking, and organized journaling. It combines a two-sided chat interface for thinking through thoughts interactively with a structured document system for traditional reflection.
 
+Try it here: https://sofamr.github.io/self-reflection-app/
 ---
 
 ## Features
